@@ -76,9 +76,10 @@
     <option>Shaitaan</option>
     <option>Article 360</option>
     <option>Dune 2</option>
-   
-<!--select date -->
- <select id="date-select">
+  </select>
+
+
+  <select id="date-select">
   <option value="">SELECT DATE</option>
   <option value="2025-08-02">Sat, 02 Aug 2025</option>
   <option value="2025-08-03">Sun, 03 Aug 2025</option>
@@ -95,7 +96,8 @@
   <option value="2025-08-14">Thu, 14 Aug 2025</option>
   <option value="2025-08-15">Fri, 15 Aug 2025</option>
 </select>
-    
+
+
   <select><option>SELECT TICKET</option>
     <option>1 ticket </option>
     <option>1+</option></select>
@@ -336,34 +338,9 @@ document.querySelectorAll('.quick-book, .book-now').forEach(button => {
   }
 
 
-
-// date-select
-  const dateSelect = document.getElementById("date-select");
-  const today = new Date();
-
-  for (let i = 0; i < 14; i++) {
-    const date = new Date(today);
-    date.setDate(today.getDate() + i);
-
-    const formattedDate = date.toLocaleDateString("en-GB", {
-      weekday: "short",
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    });
-
-    const option = document.createElement("option");
-    option.value = formattedDate;
-    option.textContent = formattedDate;
-    dateSelect.appendChild(option);
-  }
 </script>
 
 
 
 </body>
 </html>
-
-
-
-

@@ -320,9 +320,31 @@ document.querySelectorAll('.quick-book, .book-now').forEach(button => {
   }
 
 
+
+// date-select
+  const dateSelect = document.getElementById("date-select");
+  const today = new Date();
+
+  for (let i = 0; i < 14; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+
+    const option = document.createElement("option");
+    option.value = formattedDate;
+    option.textContent = formattedDate;
+    dateSelect.appendChild(option);
+  }
 </script>
 
 
 
 </body>
 </html>
+
